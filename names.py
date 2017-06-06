@@ -34,10 +34,12 @@ USERS = {
 def print_students_and_instructors(matrix):
     for key in matrix:
         print key
+        count = 0
         for each in range(0, len(matrix[key])):
+            count += 1
             first_name = matrix[key][each]['first_name'].upper()
             last_name = matrix[key][each]['last_name'].upper()
-            print ('1 - ' + first_name + ' ' + last_name + ' - ' +
+            print (str(count) + ' - ' + first_name + ' ' + last_name + ' - ' +
                    str(len(first_name + last_name)))
 
 print_students_and_instructors(USERS)
