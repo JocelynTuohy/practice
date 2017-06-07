@@ -9,7 +9,8 @@
 # keys, the shorter for the values.
 
 # input
-NAME = ["Anna", "Eli", "Pariece", "Brendan", "Amy", "Shane", "Oscar"]
+NAME = ["Anna", "Eli", "Pariece", "Brendan", "Amy", "Shane", "Oscar", "WHOA",
+        'legendary', 'fountain pen', 'fan']
 FAVORITE_ANIMAL = ["horse", "cat", "spider", "giraffe", "ticks", "dolphins",
                    "llamas"]
 
@@ -22,8 +23,11 @@ def make_dict(arr1, arr2):
     else:
         key_list = arr2
         value_list = arr1
-    for item in range(0,len(key_list)):
+    for item in range(0,len(value_list)):
         new_dict[key_list[item]] = value_list[item]
+    if len(key_list) > len(value_list):
+        for item2 in range(len(value_list),len(key_list)):
+            new_dict[key_list[item2]] = None
     return new_dict
 
 # call function
